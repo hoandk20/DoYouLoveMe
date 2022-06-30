@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="text-align: center;">
+        <p style="font-size: 24px;"id="text1">Do you love me?</p><br>
+        <button style="margin-right: 30px; width: 50px; height: 30px;" id ="yes" onclick="Yes()">Yes</button>
+    <span id="No1">
+        <button id ="No" style=" width: 50px; height: 30px;" onmouseover="No()">No</button> <p id="text2"></p>
+    </span>
+    </div>
+</body>
+<script>
+    function Yes(){
+        document.getElementById("text1").innerHTML="Dear, I Love you too !";
+    }
+    function No(){
+         var btnNo =  document.getElementById("No1");
+         btnNo.style.position= 'absolute';
+         document.getElementById("text2").innerHTML="!";
+         btnNo.style.top = Math.ceil(Math.random()*(window.innerHeight-50)) + 'px';
+         btnNo.style.left = Math.ceil(Math.random()*(window.innerWidth-50)) + 'px';
+    }
+    
+</script>
+</html>
